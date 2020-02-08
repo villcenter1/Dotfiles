@@ -27,7 +27,7 @@ Table of contents
 A script shell will get a copy of the vimrc up and running on your local machine for testing purposes. The script will install the vimrc and compile the YouCompleteMe plugin:
 ### Bash 
 ```
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/fire3420/Dotfiles/master/setup.sh)"
 
 ```
 ### Fish
