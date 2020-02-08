@@ -1,9 +1,4 @@
-## My personal vim python jupyter IDE from jarolrod/vim-python-ide
-
-
-![Imgur](https://i.imgur.com/hVVulbM.png)
-
-![screenshot](https://i.imgur.com/KoKH5aA.png)
+## My personal dotfiles
 
 
 
