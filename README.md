@@ -27,7 +27,7 @@ Table of contents
 A script shell will get a copy of the vimrc up and running on your local machine for testing purposes. The script will install the vimrc and compile the YouCompleteMe plugin:
 ### Bash 
 ```
-sh -c "$(curl --insecure --request GET --header 'PRIVATE-TOKEN: EEdBkgXdgDKJfrBpBQeG' 'https://megaman.iptime.org:30000/api/v4/projects/46/repository/files/setup.sh/raw?ref=master')"
+
 
 ```
 ### Fish
