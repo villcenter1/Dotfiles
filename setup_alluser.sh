@@ -159,12 +159,12 @@ wrapper() {
   if [ -f $VIMRC ] || [ -h $VIMRC ]; then
     printf "${YELLOW}%s${NORMAL}\n" "Found ~/.vimrc."
     printf "${BLUE}%s${NORMAL}\n" "You will see your old ~/.vimrc as $VIM/vimrc.bak"
-    mv $VIMRC $VIM/vimrc.bak
+    mv $VIMRC $VIM/backup/vimrc.bak
   fi
 
   # Symlink vimrc files
   printf "${BLUE}%s${NORMAL}\n" "Symlinking $VIM/vimrc with ~/.vimrc..."
-  ln -fs $VIM/vimrc_alluser $VIMRC
+  ln -fs $VIM/vimrc $VIMRC
   
   
   # Check for an existing inputrc config
@@ -172,12 +172,12 @@ wrapper() {
   if [ -f $INPUTRC ] || [ -h $INPUTRC ]; then
       printf "${YELLOW}%s${NORMAL}\n" "Found ~/.inputrc."
       printf "${BLUE}%s${NORMAL}\n" "You will see your old ~/.inputrc as $VIM/inputrc.bak"
-      mv $INPUTRC $VIM/inputrc.bak
+      mv $INPUTRC $VIM/backup/inputrc.bak
   fi
 
   # Symlink inputrc files
   printf "${BLUE}%s${NORMAL}\n" "Symlinking $VIM/inputrc with ~/.inputrc..."
-  ln -fs $VIM/inputrc_alluser $INPUTRC
+  ln -fs $VIM/inputrc $INPUTRC
   
   
   # Check for an existing tmux config
@@ -185,12 +185,12 @@ wrapper() {
   if [ -f $TMUXCONF ] || [ -h $TMUXCONF]; then
       printf "${YELLOW}%s${NORMAL}\n" "Found ~/.tmux.conf."
       printf "${BLUE}%s${NORMAL}\n" "You will see your old ~/.tmux.conf as $VIM/tmux.conf.bak"
-      mv $TMUXCONF $VIM/tmux.conf.bak
+      mv $TMUXCONF $VIM/backup/tmux.conf.bak
   fi
 
   # Symlink tmux.conf files
   printf "${BLUE}%s${NORMAL}\n" "Symlinking $VIM/tmux.conf with ~/.tmux.conf..."
-  ln -fs $VIM/tmux_alluser.conf $TMUXCONF
+  ln -fs $VIM/tmux.conf $TMUXCONF
 
   
 

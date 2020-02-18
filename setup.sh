@@ -146,7 +146,7 @@ wrapper() {
   if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
     printf "${YELLOW}%s${NORMAL}\n" "Found ~/.vimrc."
     printf "${BLUE}%s${NORMAL}\n" "You will see your old ~/.vimrc as $VIM/vimrc.bak"
-    mv ~/.vimrc $VIM/vimrc.bak
+    mv ~/.vimrc $VIM/backup/vimrc.bak
   fi
 
   # Symlink vimrc files
@@ -159,7 +159,7 @@ wrapper() {
   if [ -f ~/.inputrc ] || [ -h ~/.inputrc ]; then
       printf "${YELLOW}%s${NORMAL}\n" "Found ~/.inputrc."
       printf "${BLUE}%s${NORMAL}\n" "You will see your old ~/.inputrc as $VIM/inputrc.bak"
-      mv ~/.inputrc $VIM/inputrc.bak
+      mv ~/.inputrc $VIM/backup/inputrc.bak
   fi
 
   # Symlink inputrc files
@@ -172,7 +172,7 @@ wrapper() {
   if [ -f ~/.tmux.conf ] || [ -h ~/.tmux.conf ]; then
       printf "${YELLOW}%s${NORMAL}\n" "Found ~/.tmux.conf."
       printf "${BLUE}%s${NORMAL}\n" "You will see your old ~/.tmux.conf as $VIM/tmux.conf.bak"
-      mv ~/.tmux.conf $VIM/tmux.conf.bak
+      mv ~/.tmux.conf $VIM/backup/tmux.conf.bak
   fi
 
   # Symlink tmux.conf files
