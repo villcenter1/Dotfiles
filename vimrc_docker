@@ -58,6 +58,7 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'mitsuhiko/vim-python-combined'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'jupyter-vim/jupyter-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()                           " required
@@ -396,20 +397,20 @@ vnoremap <leader>1 ^
 vnoremap <leader>2 $
 
 " Jupyter key map
-"nnoremap <buffer> <silent> <localleader>j :JupyterConnect<CR>
-"nnoremap <buffer> <silent> <localleader>r :JupyterRunFile<CR>
-"nnoremap <buffer> <silent> <localleader>I :PythonImportThisFile<CR>
+nnoremap <buffer> <silent> <localleader>j :JupyterConnect<CR>
+nnoremap <buffer> <silent> <localleader>r :JupyterRunFile<CR>
+nnoremap <buffer> <silent> <localleader>I :PythonImportThisFile<CR>
 
 " Change to directory of current file
-"nnoremap <buffer> <silent> <localleader>d :JupyterCd %:p:h<CR>
+nnoremap <buffer> <silent> <localleader>d :JupyterCd %:p:h<CR>
 
 " Send a selection of lines
-"nnoremap <buffer> <silent> <localleader>x :JupyterSendCell<CR>
-"nnoremap <buffer> <silent> <localleader>E :JupyterSendRange<CR>
-"nmap     <buffer> <silent> <localleader>e <Plug>JupyterRunTextObj
-"vmap     <buffer> <silent> <localleader>e <Plug>JupyterRunVisual
-"
-"nnoremap <buffer> <silent> <localleader>U :JupyterUpdateShell<CR>
+nnoremap <buffer> <silent> <localleader>x :JupyterSendCell<CR>
+nnoremap <buffer> <silent> <localleader>E :JupyterSendRange<CR>
+nmap     <buffer> <silent> <localleader>e <Plug>JupyterRunTextObj
+vmap     <buffer> <silent> <localleader>e <Plug>JupyterRunVisual
+
+nnoremap <buffer> <silent> <localleader>U :JupyterUpdateShell<CR>
 
 " Debugging maps
 nnoremap <buffer> <silent> <localleader>b :PythonSetBreak<CR>
