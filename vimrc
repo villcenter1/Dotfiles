@@ -447,6 +447,7 @@ map <silent><Leader>p :call setreg("\"",system("xclip -o -selection clipboard"))
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 nnoremap <silent><Leader>o :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><Leader>O :set paste<CR>m`O<Esc>``:set nopaste<CR>
 nnoremap <silent><C-w> :tabclose<CR>
 nnoremap <C-r> :call NERDComment(0,"toggle")<CR>
 vnoremap <C-r> :call NERDComment(0,"toggle")<CR>
@@ -476,3 +477,5 @@ vnoremap <leader>2 $
 nnoremap <buffer> <silent> <localleader>b :PythonSetBreak<CR>
 
 nnoremap <buffer> <silent> <localleader>t :TagbarToggle<CR>
+
+

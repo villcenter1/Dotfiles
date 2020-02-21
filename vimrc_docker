@@ -59,7 +59,7 @@ Plugin 'mitsuhiko/vim-python-combined'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'jupyter-vim/jupyter-vim'
-
+Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 " All of your Plugins must be added before the following line
 call vundle#end()                           " required
 filetype on
@@ -387,6 +387,7 @@ map <silent><Leader>p :call setreg("\"",system("xclip -o -selection clipboard"))
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 nnoremap <silent><Leader>o :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><Leader>O :set paste<CR>m`O<Esc>``:set nopaste<CR>
 nnoremap <silent><C-w> :tabclose<CR>
 nnoremap <C-r> :call NERDComment(0,"toggle")<CR>
 vnoremap <C-r> :call NERDComment(0,"toggle")<CR>
@@ -416,3 +417,6 @@ nnoremap <buffer> <silent> <localleader>U :JupyterUpdateShell<CR>
 nnoremap <buffer> <silent> <localleader>b :PythonSetBreak<CR>
 
 nnoremap <buffer> <silent> <localleader>t :TagbarToggle<CR>
+
+map <C-Y> :call yapf#YAPF()<cr>
+imap <C-Y> <c-o>:call yapf#YAPF()<cr>
