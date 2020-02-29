@@ -170,3 +170,46 @@ vno <right> <Nop>
 vno <up> <Nop>
 ```
 
+Tmux Key bindings
+So ~/.tmux.conf overrides default key bindings for many action, to make them more reasonable, easy to recall and comforable to type.
+
+Let's go through them.
+
+If you are an iTerm2 user, third column describes the keybinding of similar "action" in iTerm2. It's possible to reuse very same keys you already get used to and tell iTerm2 to execute analogous tmux actions. See iTerm2 and tmux integration section below.
+
+tmux key	Description	iTerm2 key
+C-a	Default prefix, used instead of "C-b". Same prefix is used in screen program, and it's easy to type. The only drawback of "C-a" is that underlying shell does not receive the keystroke to move to the beginning of the line.	-
+<prefix> C-e	Open ~/.tmux.conf file in your $EDITOR	-
+<prefix> C-r	Reload tmux configuration from ~/.tmux.conf file	-
+<prefix> r	Rename current window	-
+<prefix> R	Rename current session	-
+<prefix> _	Split new pane horizontally	⌘⇧D
+<prefix> |	Split new pane vertically	⌘D
+<prefix> <	Select next pane	⌘[
+<prefix> >	Select previous pane	⌘]
+<prefix> ←	Select pane on the left	⌘⌥←
+<prefix> →	Select pane on the right	⌘⌥→
+<prefix> ↑	Select pane on the top	⌘⌥↑
+<prefix> ↓	Select pane on the bottom	⌘⌥↓
+<prefix> C-←	Resize pane to the left	^⌘←
+<prefix> C-→	Resize pane to the right	^⌘→
+<prefix> C-↑	Resize pane to the top	^⌘↑
+<prefix> C-↓	Resize pane to the bottom	^⌘↓
+<prefix> >	Move to next window	⌘⇧]
+<prefix> <	Move to previous window	⌘⇧[
+<prefix> Tab	Switch to most recently used window	^Tab
+<prefix> L	Link window from another session by entering target session and window reference	-
+<prefix> \	Swap panes back and forth with 1st pane. When in main-horizontal or main-vertical layout, the main panel is always at index 1. This keybinding let you swap secondary pane with main one, and do the opposite.	⌘\
+<prefix> C-o	Swap current active pane with next one	-
+<prefix> +	Toggle zoom for current pane	⌘⇧Enter
+<prefix> x	Kill current pane	⌘W
+<prefix> X	Kill current window	⌘⌥W
+<prefix> C-x	Kill other windows but current one (with confirmation)	-
+<prefix> Q	Kill current session (with confirmation)	-
+<prefix> C-u	Merge current session with another. Essentially, this moves all windows from current session to another one	-
+<prefix> d	Detach from session	-
+<prefix> D	Detach other clients except current one from session	-
+<prefix> C-s	Toggle status bar visibility	-
+<prefix> m	Monitor current window for activity	-
+<prefix> M	Monitor current window for silence by entering silence period	-
+<prefix> F12	Switch off all key binding and prefix hanling in current window. See "Nested sessions" paragraph for more info
