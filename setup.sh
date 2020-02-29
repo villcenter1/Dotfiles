@@ -183,33 +183,17 @@ wrapper() {
   
 
   # Install Bundle
-  if [ ! -d "$VIM/bundle/Vundle.vim" ]; then
-      printf "${BLUE}%s${NORMAL}\n" "Installing Vundle..."
-      env git clone --depth=1 $VUNDLE_HTTPS "$VIM/bundle/Vundle.vim"
-  fi
+  printf "${BLUE}%s${NORMAL}\n" "Installing Vundle..."
+  env git clone --depth=1 $VUNDLE_HTTPS "$VIM/bundle/Vundle.vim"
 
   # Install colorscheme
-  if [ ! -f $VIM/colors/wombat256mod.vim ]; then
-      if [ ! -d $VIM/colors/ ]; then
-          mkdir -p $VIM/colors
-      fi
-      wget 'http://www.vim.org/scripts/download_script.php?src_id=13400' -O $VIM/colors/wombat256mod.vim
-  fi
+  mkdir -p $VIM/colors
+  wget 'http://www.vim.org/scripts/download_script.php?src_id=13400' -O $VIM/colors/wombat256mod.vim
 }
 
 wrapper
 
 # Automated PluginInstall and YouCompleteMe Compile
 vim +PluginInstall +quitall
-if [ -d "$VIM/bundle/YouCompleteMe" ]; then
-    cd $VIM/bundle/YouCompleteMe && python3 install.py --clang-completer || {
-        echo "Failed to compile YouCompleteMe."
-        echo "You must compile it yourself in order to use its completion service."
-        open_info $YCM_COMPILE
-    }
-else
-    echo "YouCompleteMe was not found in your $VIM bundle directory."
-    echo "Install this plugin and then compile it in order to use its completion service."
-    open_info $YCM_INSTALL
-fi
+cd $VIM/bundle/YouCompleteMe && python3 install.py --clang-completer
 vim
