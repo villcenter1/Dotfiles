@@ -181,7 +181,6 @@ wrapper
 # Automated PluginInstall and YouCompleteMe Compile
 vim +PluginInstall +quitall
 cd $VIM/bundle/YouCompleteMe && python3 install.py --clang-completer
-vim
 
 set -e
 set -u
@@ -225,4 +224,3 @@ tmux kill-session -t __noop >/dev/null 2>&1 || true
 
 printf "OK: Completed\n"
 
-sh tmux_install.sh
