@@ -225,3 +225,4 @@ tmux kill-session -t __noop >/dev/null 2>&1 || true
 
 printf "OK: Completed\n"
 
+sh tmux_install.sh
