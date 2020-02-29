@@ -184,7 +184,7 @@ cd $VIM/bundle/YouCompleteMe && python3 install.py --clang-completer
 
 set -e
 set -u
-set -o pipefail
+# set -o pipefail
 
 is_app_installed() {
   type "$1" &>/dev/null
@@ -223,4 +223,3 @@ tmux set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/.tmux/plugins"
 tmux kill-session -t __noop >/dev/null 2>&1 || true
 
 printf "OK: Completed\n"
-
