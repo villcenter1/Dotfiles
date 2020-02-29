@@ -211,7 +211,8 @@ fi
 
 cp -f "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak" 2>/dev/null || true
 cp -a $VIM/tmux/. "$HOME"/.tmux/
-ln -sf .tmux/tmux.conf "$HOME"/.tmux.conf;
+ln -sf $VIM/tmux/tmux.conf "$HOME"/.tmux/.tmux.conf;
+ln -sf $VIM/tmux/tmux.conf "$HOME"/.tmux.conf;
 
 # Install TPM plugins.
 # TPM requires running tmux server, as soon as `tmux start-server` does not work
